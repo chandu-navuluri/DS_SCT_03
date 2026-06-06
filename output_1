@@ -1,0 +1,107 @@
+   age          job  marital  ... previous poutcome   y
+0   30   unemployed  married  ...        0  unknown  no
+1   33     services  married  ...        4  failure  no
+2   35   management   single  ...        1  failure  no
+3   30   management  married  ...        0  unknown  no
+4   59  blue-collar  married  ...        0  unknown  no
+
+[5 rows x 17 columns]
+(4521, 17)
+<class 'pandas.DataFrame'>
+RangeIndex: 4521 entries, 0 to 4520
+Data columns (total 17 columns):
+ #   Column     Non-Null Count  Dtype
+---  ------     --------------  -----
+ 0   age        4521 non-null   int64
+ 1   job        4521 non-null   str  
+ 2   marital    4521 non-null   str  
+ 3   education  4521 non-null   str  
+ 4   default    4521 non-null   str  
+ 5   balance    4521 non-null   int64
+ 6   housing    4521 non-null   str  
+ 7   loan       4521 non-null   str  
+ 8   contact    4521 non-null   str  
+ 9   day        4521 non-null   int64
+ 10  month      4521 non-null   str  
+ 11  duration   4521 non-null   int64
+ 12  campaign   4521 non-null   int64
+ 13  pdays      4521 non-null   int64
+ 14  previous   4521 non-null   int64
+ 15  poutcome   4521 non-null   str  
+ 16  y          4521 non-null   str  
+dtypes: int64(7), str(10)
+memory usage: 600.6 KB
+None
+age          0
+job          0
+marital      0
+education    0
+default      0
+balance      0
+housing      0
+loan         0
+contact      0
+day          0
+month        0
+duration     0
+campaign     0
+pdays        0
+previous     0
+poutcome     0
+y            0
+dtype: int64
+age          int64
+job          int64
+marital      int64
+education    int64
+default      int64
+balance      int64
+housing      int64
+loan         int64
+contact      int64
+day          int64
+month        int64
+duration     int64
+campaign     int64
+pdays        int64
+previous     int64
+poutcome     int64
+y            int64
+dtype: object
+
+Accuracy Score:
+0.8895027624309392
+
+Confusion Matrix:
+[[771  30]
+ [ 70  34]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.92      0.96      0.94       801
+           1       0.53      0.33      0.40       104
+
+    accuracy                           0.89       905
+   macro avg       0.72      0.64      0.67       905
+weighted avg       0.87      0.89      0.88       905
+
+
+Feature Importance:
+      Feature  Importance
+11   duration    0.615918
+13      pdays    0.123749
+8     contact    0.095509
+15   poutcome    0.069890
+10      month    0.045982
+9         day    0.015579
+5     balance    0.015489
+0         age    0.010553
+2     marital    0.007331
+7        loan    0.000000
+4     default    0.000000
+3   education    0.000000
+1         job    0.000000
+6     housing    0.000000
+12   campaign    0.000000
+14   previous    0.000000
